@@ -11,6 +11,8 @@
     color: white;
     display: flex;
     align-items: center;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .nav-logo{
@@ -37,7 +39,7 @@
 
 /** Box 2**/
 .nav-location{
-    width: 6rem;
+    width: 8rem;
     height: 3.125rem;
     align-items: center;
     flex-direction: column;
@@ -66,8 +68,8 @@
 
 .nav-search{
     display: flex;
-    background-color: pink;
-    width: 41rem;
+  /**  background-color: pink;**/
+    width: 70rem;
     height: 3.125rem;
 }
 
@@ -75,6 +77,7 @@
     width: 3.125rem;
     border-top-left-radius: .5rem;
     border-bottom-left-radius: .5rem;
+    
 }
 .search-input{
     width: 34rem;
@@ -83,12 +86,44 @@
 
 .search-icon{
     width: 3.5rem;
-    background-color: #ffce12;
+    background-color: #febd68;
     border-top-right-radius: .5rem;
     border-bottom-right-radius: .5rem;
     align-items: center;
     text-align: center;
     display: flex;
     justify-content: center;
-    font-size: 2rem ;
+    font-size: 1.7rem ;
+    color: black;
+}
+
+/** box 4 language **/
+
+.nav-lang{
+    display: flex;
+    align-items: last baseline;
+    width: 3.5rem;
+    height: 3rem;
+    margin-left: 2rem;
+    background-color: #0f1111;
+}
+span{
+    font-size: .7rem;
+}
+
+.nav-acc{
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+.nav-return{
+    margin-left: 3rem;
+    
+}
+
+/** cart **/
+.nav-cart i{
+    align-items: center;
+    margin-left: 3.5rem;
+    font-size: 1.5rem;
 }
