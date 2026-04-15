@@ -1,32 +1,62 @@
 const slides = document.querySelectorAll(".slide")
-var counter = 0;
+var counter = 1;
 
-slides.forEach(
-    (slide, index) =>{
-        slide.style.left = `${index * 100}%`
+// initial positioning
+slides.forEach((slide, index) => {
+    slide.style.left = `${index * 100}%`
+})
+
+const goPrev = () => {
+    counter--
+    slideImage()
+}
+
+const goNext = () => {
+    counter++
+    slideImage()
+}
+
+const slideImage = () => {
+
+    // 1. MOVE SLIDES
+    slides.forEach((slide) => {
+        slide.style.transform = `translateX(-${counter * 100}%)`
+    })
+
+    // 2. HANDLE FAKE LAST
+    if (counter === slides.length - 1) {
+        setTimeout(() => {
+            slides.forEach((slide) => {
+                slide.style.transition = "none"
+            })
+
+            counter = 1
+
+            slides.forEach((slide) => {
+                slide.style.transform = `translateX(-${counter * 100}%)`
+            })
+        }, 1000)
     }
-)
 
-const goPrev = () =>{
-    counter --
-    if (counter < 0)
-    counter = slides.length - 1
-    slideImage()
-    
-}
+    // 3. HANDLE FAKE FIRST
+    if (counter === 0) {
+        setTimeout(() => {
+            slides.forEach((slide) => {
+                slide.style.transition = "none"
+            })
 
-const goNext = () =>{
-    counter ++
-    if (counter >= slides.length)
-    counter = 0
-    slideImage()
-    
-}
+            counter = slides.length - 2
 
-const slideImage = () =>{
-    slides.forEach(
-        (slide)=>{
-            slide.style.transform =`translateX(-${counter*100}%)`
-        }
-    )
+            slides.forEach((slide) => {
+                slide.style.transform = `translateX(-${counter * 100}%)`
+            })
+        }, 1000)
+    }
+
+    // 4. RESTORE TRANSITION
+    setTimeout(() => {
+        slides.forEach((slide) => {
+            slide.style.transition = "1s"
+        })
+    }, 50)
 }
