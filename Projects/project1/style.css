@@ -4,7 +4,7 @@
     border: border-box;
 
 }
-
+/** NavBar Code Implementation of Css **/
 .navbar {
     height: 60px;
     background-color: #0f1111;
@@ -14,7 +14,11 @@
     display: flex;
     justify-content: space-evenly;
 }
-
+/** Group 1 **/
+.nav-group1{
+    display: flex;
+    align-items: center;
+}
 .nav-logo{
     height: 50px;
     width: 115px;
@@ -63,16 +67,23 @@
     display: flex;
     align-items: center;
 }
-
+/** Group2 **/
+.nav-group2{
+    display: flex;
+    justify-content: center;
+}
 /** 3 box serach bar**/
 
 .nav-search{
     display: flex;
   /**  background-color: pink;**/
-    width: 70rem;
-    height: 3.125rem;
-}
+    width: 50rem;
+    height: 3rem;
 
+}
+.nav-search:hover{
+    border: 2px solid orange;
+}
 .search-select{
     width: 3.125rem;
     border-top-left-radius: .5rem;
@@ -80,7 +91,7 @@
     
 }
 .search-input{
-    width: 34rem;
+    width: 45rem;
     
 }
 
@@ -96,7 +107,14 @@
     font-size: 1.7rem ;
     color: black;
 }
-
+    /** Group 3**/
+.nav-group3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
 /** box 4 language **/
 
 .nav-lang{
@@ -116,14 +134,76 @@ span{
     font-weight: 700;
 }
 
-.nav-return{
-    margin-left: 3rem;
-    
-}
+
 
 /** cart **/
 .nav-cart i{
     align-items: center;
-    margin-left: 3.5rem;
+ 
     font-size: 1.5rem;
+}
+
+
+/** Panel **/
+
+.panel{
+    display: flex;
+    height: 2rem;
+    background-color: #232f3e;
+    align-items: center;
+    color: white ;
+    gap: 1rem;
+}
+.left-panel{
+    display: flex;
+    color: white;
+    gap: 1rem;
+}
+
+.panel-options{
+    display: flex;
+    color: white;
+    gap: 1.5rem;
+}
+a{
+    color: white;
+    text-decoration: none;
+    gap: 2rem;
+}
+
+
+/** Hero Section **/
+
+.window-slider{
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    overflow: hidden    ;
+}
+img{
+    width: 100%;
+}
+
+.slide{
+    background-size: cover;
+    position: absolute;
+    transition: 1s;
+}
+
+.nav-but{
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: 96%;
+    top: 18%;
+    left: 2%;
+    right: 2%;
+
+}
+
+.nav-but button{
+    font-size: 3rem;
+    color: black;
+    background-color: transparent;
+    border: none;
 }
