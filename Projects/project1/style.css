@@ -178,7 +178,8 @@ a{
     height: 100vh;
     background-size: cover;
     position: relative;
-    overflow: hidden    ;
+    overflow: hidden;
+    display: flex;
 }
 img{
     width: 100%;
@@ -206,4 +207,50 @@ img{
     color: black;
     background-color: transparent;
     border: none;
+}
+
+.hero-msg{
+    display: flex;
+    position: absolute;
+    font-size: 0.85rem;
+    background-color: white;
+    top: 60%;
+    width: 95%; 
+    left: 2;
+    right: 2%;
+    justify-content: center;
+    padding: .7%;
+    font-weight: 550;
+
+}
+.hero-msg a{
+    color: black;
+}
+
+/** Shop Section **/
+.shop-section{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.box1{
+    border: 2px solid black;    
+    height: 400px ;
+    width: 23%;
+    background-color: white;
+    display: flex;
+    background-size: cover;
+
+}
+
+.box-img{
+    height: 40vh;
+    width: 140%;
+    background-size: cover;
+ 
+}
+
+.content-box{
+    padding: 25px 10px 15px 10px;
 }
