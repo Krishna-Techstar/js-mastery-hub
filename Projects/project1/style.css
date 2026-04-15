@@ -231,6 +231,8 @@ img{
 .shop-section{
     display: flex;
     justify-content: space-evenly;
+    position: relative;
+    top: -40vh;
     
 }
 
